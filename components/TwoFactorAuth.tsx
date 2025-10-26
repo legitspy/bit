@@ -133,13 +133,6 @@ const TwoFactorAuth: React.FC<TwoFactorAuthProps> = ({ email }) => {
             {loading ? <Spinner /> : 'Verify Code'}
           </button>
         </form>
-
-        <p className="text-center text-gray-400 mt-6">
-          Not you? 
-          <button onClick={logout} className="text-blue-400 hover:text-blue-300 font-semibold ml-2">
-            Sign out
-          </button>
-        </p>
       </div>
     </div>
   );

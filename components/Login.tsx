@@ -31,7 +31,7 @@ const Logo = () => (
 
 
 const Login: React.FC = () => {
-    const { loginWithPin, logout } = useAuth();
+    const { loginWithPin } = useAuth();
     const [pin, setPin] = useState<string[]>(new Array(4).fill(''));
     const [pinError, setPinError] = useState('');
     const [pinLoading, setPinLoading] = useState(false);
@@ -171,16 +171,6 @@ const Login: React.FC = () => {
                     </form>
                 </div>
             </div>
-            <button 
-                onClick={logout} 
-                className="fixed bottom-6 left-6 text-gray-400 hover:text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 flex items-center gap-2 bg-gray-800/50 border border-gray-700 backdrop-blur-sm"
-                aria-label="Sign out"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clipRule="evenodd" />
-                </svg>
-                <span>Sign Out</span>
-            </button>
         </div>
     );
 };
