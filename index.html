@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BitPrivacy - Smart Wallet</title>
-    
-    <!-- iOS Native App-like Experience -->
+    <meta name="theme-color" content="#111827">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="BitPrivacy">
-    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" href="/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/logo.svg">
+    <link rel="manifest" href="/manifest.webmanifest">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,16 +28,6 @@
 
       @keyframes fade-in-fast { from { opacity: 0; } to { opacity: 1; } }
       .animate-fade-in-fast { animation: fade-in-fast 0.15s ease-out forwards; }
-      
-      /* Safe Area Padding for iOS Devices */
-      .safe-main-padding-bottom {
-        padding-bottom: calc(7rem + env(safe-area-inset-bottom));
-      }
-      @media (min-width: 1024px) {
-        .safe-main-padding-bottom {
-          padding-bottom: 2rem; /* Corresponds to lg:pb-8 */
-        }
-      }
     </style>
     <script>
       tailwind.config = {
@@ -56,8 +46,8 @@
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.3.0"
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
   }
 }
 </script>
